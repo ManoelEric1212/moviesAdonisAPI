@@ -10,3 +10,8 @@ Route.put('/movie/:id', 'MovieController.update')
 Route.delete('/movie/:id', 'MovieController.destroy')
 
 
+Route.post('/user', 'UserController.store')
+Route.post('/login', 'UserController.login')
+Route.get('/user', 'UserController.index').middleware('auth')
+
+
